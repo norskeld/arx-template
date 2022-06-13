@@ -1,2 +1,7 @@
-# imp-template
-Template for playing around with imp.
+# {{ R_NAME }}
+
+{{ R_DESC }}
+
+## License
+
+[The Unlicense](LICENSE).
