@@ -8,10 +8,9 @@ replacements {
 // Actions to perform on files
 actions {
   suite name="init" {
-    copy from="path/to/file/or/dir" to="path/to/target"
-    copy from="glob/pattern" to="path/to/target/dir"
+    copy from=".template/LICENSE" to="LICENSE"
 
-    // Can also be used to rename files or directories
+    // `move` action can also be used to rename files or directories
     move from="path/to/file/or/dir" to="path/to/target"
     move from="glob/pattern" to="path/to/target/dir"
 
@@ -19,6 +18,7 @@ actions {
     delete "glob/pattern"
   }
 
+  // This suite contains unresolved "lint" dependency
   suite name="git" requires="init lint" {
     run "git init"
     run "git add ."
