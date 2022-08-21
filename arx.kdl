@@ -8,14 +8,10 @@ replacements {
 // Actions to perform on files
 actions {
   suite name="init" {
-    copy from=".template/LICENSE" to="LICENSE"
-
-    // `move` action can also be used to rename files or directories
-    move from="path/to/file/or/dir" to="path/to/target"
-    move from="glob/pattern" to="path/to/target/dir"
-
-    delete "path/to/file/or/dir"
-    delete "glob/pattern"
+    copy from=".template/*.toml" to="."
+    delete ".template/*.toml"
+    move from=".template/**/*" to="."
+    delete ".template"
   }
 
   // This suite contains unresolved "lint" dependency
