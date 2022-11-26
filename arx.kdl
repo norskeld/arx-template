@@ -16,8 +16,8 @@ actions {
 
   // This suite contains unresolved "lint" dependency
   suite name="git" requires="init lint" {
-    run "git init"
-    run "git add ."
-    run "git commit -m 'chore: init'"
+    run "echo git init"
+    run "echo git add ."
+    run "echo git commit -m 'chore: init'"
   }
 }
