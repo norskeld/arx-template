@@ -9,9 +9,9 @@ replacements {
 actions {
   suite name="init" {
     copy from=".template/*.toml" to="."
-    // delete ".template/*.toml"
+    delete ".template/*.toml"
     move from=".template/.vscode" to="."
-    // delete ".template"
+    delete ".template"
   }
 
   // This suite contains unresolved "lint" dependency
