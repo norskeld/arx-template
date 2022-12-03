@@ -8,7 +8,7 @@ replacements {
 // Actions to perform on files
 actions {
   suite name="init" {
-    copy from=".template/*.toml" to="{#0}"
+    copy from=".template/*.toml" to="."
     // delete ".template/*.toml"
     move from=".template/.vscode" to="."
     // delete ".template"
