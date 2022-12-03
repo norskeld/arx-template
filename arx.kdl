@@ -10,7 +10,7 @@ actions {
   suite name="init" {
     copy from=".template/*.toml" to="."
     delete ".template/*.toml"
-    move from=".template/.vscode" to="."
+    move from=".template/**/*" to="."
     delete ".template"
   }
 
