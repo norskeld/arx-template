@@ -20,7 +20,8 @@ actions {
     run "echo git add ."
     run "echo git commit -m 'chore: init'"
 
-    run r#"
+    // `run` actions can (or rather should?) have a name.
+    run name="multiline greeting" r#"
       echo "KDL "
       echo "is "
       echo "awesome!"
