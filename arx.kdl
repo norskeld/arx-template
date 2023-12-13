@@ -7,24 +7,24 @@ replacements {
 
 // Actions to perform on files
 actions {
-  // suite name="init" {
-  //   copy from=".template/*.toml" to="."
-  //   delete ".template/*.toml"
-  //   move from=".template/**/*" to="."
-  //   delete ".template"
-  // }
-  //
+  suite name="init" {
+    copy from=".template/*.toml" to="."
+    delete ".template/*.toml"
+    move from=".template/**/*" to="."
+    delete ".template"
+  }
+
   // This suite contains unresolved "lint" dependency
-  // suite name="git" requires="init lint" {
-  //   run "echo git init"
-  //   run "echo git add ."
-  //   run "echo git commit -m 'chore: init'"
-  // 
-  //   // `run` actions can (or rather should?) have a name.
-  //   run name="multiline greeting" r#"
-  //     echo "KDL "
-  //     echo "is "
-  //     echo "awesome!"
-  //   "#
-  // }
+  suite name="git" requires="init lint" {
+    run "echo git init"
+    run "echo git add ."
+    run "echo git commit -m 'chore: init'"
+
+    // `run` actions can (or rather should?) have a name.
+    run name="multiline greeting" r#"
+      echo "KDL "
+      echo "is "
+      echo "awesome!"
+    "#
+  }
 }
