@@ -19,5 +19,11 @@ actions {
     run "echo git init"
     run "echo git add ."
     run "echo git commit -m 'chore: init'"
+
+    run r#"
+      echo "KDL "
+      echo "is "
+      echo "awesome!"
+    "#
   }
 }
