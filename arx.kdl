@@ -21,7 +21,7 @@ actions {
   suite "hello" {
     // This action simply echoes the argument into stdout. Raw strings are trimmed and aligned to
     // the leftmost non-whitespace character.
-    echo r#"
+    echo trim=true r#"
       Sup! Let's set everything up. We will:
 
       - Print this message.
