@@ -1,6 +1,6 @@
-# {{ R_NAME }}
+# {r_name}
 
-{{ R_DESC }}
+{r_description}
 
 ## License
 
